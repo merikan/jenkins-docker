@@ -1,0 +1,14 @@
+pipeline {
+  agent {
+    docker {
+      image 'eclipse-temurin:17-jdk'
+    }
+  }
+  stages {
+    stage('no agent') {
+      steps {
+        sh(script: 'java -version', returnStdout: true)
+      }
+    }
+  }
+}
