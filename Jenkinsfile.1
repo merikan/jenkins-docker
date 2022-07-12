@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'eclipse-temurin:17-jdk'
-      args '-m 4GB'
+      image 'openjdk:17'
+      //image 'eclipse-temurin:17-jdk'
     }
   }
   stages {
